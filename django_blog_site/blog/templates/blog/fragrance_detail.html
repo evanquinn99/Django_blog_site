@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ fragrance.name }}</h1>
+<div class="row">
+    <div class="col-md-8">
+    </div>
+    <div class="col-md-4">
+    	<h5>Fragrance Brand:</h5>
+        <p>{{ fragrance.brand }}</p>
+    	<br>
+        <h5>Rating: {{ fragrance.rating }}</h5>
+        <h5>About the fragrance:</h5>
+        <p>{{ fragrance.review }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ fragrance.technology }}</p>
+    </div>
+</div>
+{% endblock %}
