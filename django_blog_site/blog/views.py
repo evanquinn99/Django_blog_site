@@ -8,6 +8,13 @@ def fragrance_list(request):
 	}
 	return render(request, 'blog/fragrance_list.html', context)
 
+def fragrance_detail(request, pk):
+    fragrance = Fragrance.objects.get(pk=pk)
+    context = {
+        'fragrance': fragrance
+    }
+    return render(request, 'blog/fragrance_detail.html', context)	
+
 def home(request):
 	return render(request, 'blog/home.html')
 

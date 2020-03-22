@@ -4,8 +4,9 @@ from django.db import models
 
 #The actual fragrance/cologne
 class Fragrance(models.Model):
+	brand = models.CharField(max_length = 100, default = '')
 	name = models.CharField(max_length = 100)
-	notes = models.CharField(max_length = 500)
+	review = models.CharField(max_length = 500)
 	rating = models.FloatField()
 
 	def __str__(self):
