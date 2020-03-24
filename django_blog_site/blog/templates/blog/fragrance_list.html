@@ -6,7 +6,7 @@
 {% for fragrance in fragrances %}
     <div class="col-md-4">
         <div class="card mb-2">
-            <img class="card-img-top" src="{% static project.image %}">
+            <img class="card-img-top" src="{{ fragrance.image_url }}">
             <div class="card-body">
                 <h5 class="card-title">{{ fragrance.name }}</h5>
                 <p class="card-text">{{ fragrance.rating }}</p>

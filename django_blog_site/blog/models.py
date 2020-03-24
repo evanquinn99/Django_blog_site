@@ -1,5 +1,4 @@
 
-
 from django.db import models
 
 #The actual fragrance/cologne
@@ -8,6 +7,15 @@ class Fragrance(models.Model):
 	name = models.CharField(max_length = 100)
 	review = models.CharField(max_length = 500)
 	rating = models.FloatField()
+	image = models.ImageField(upload_to='images/', blank = True)
+	@property
+	def image_url(self):
+		if self.image:
+			return self.image.url
+		else: 
+			self.image = "C:/Users/Evan/Desktop/Django_blog_site/django_blog_site/django_blog_site/media/unknown.png"
+			return self.image.url
+
 
 	def __str__(self):
 		return self.name
