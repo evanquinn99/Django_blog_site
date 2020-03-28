@@ -20,6 +20,8 @@ class Fragrance(models.Model):
 	def __str__(self):
 		return self.name
 
+
+
 #Intermediate between Personal Favorites cart and individual Fragrance
 class Fragrance_Favorite(models.Model):
 	fragrance = models.ForeignKey(Fragrance, on_delete = models.CASCADE)
